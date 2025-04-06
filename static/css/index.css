@@ -21,7 +21,7 @@ body {
   top: 0;
   left: 0;
   background-color: rgba(255, 0, 0, 0.0); /* Semi-transparent black */
-  color: rgb(255, 254, 254);
+  color: rgb(255, 0, 0);
   padding: 20px;
   font-size: 15px;
   font-family: 'Google Sans', sans-serif;
@@ -32,7 +32,7 @@ body {
   top: 0%;
   left: 50%;
   background-color: rgba(255, 0, 0, 0.0); /* Semi-transparent black */
-  color: rgb(255, 254, 254);
+  color: rgb(255, 0, 0);
   padding: 20px;
   font-size: 15px;
   font-family: 'Google Sans', sans-serif;
