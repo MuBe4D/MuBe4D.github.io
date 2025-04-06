@@ -19,22 +19,22 @@ body {
 .video-description0 {
   position: absolute;
   top: 0;
-  left: 0;
+  left: 32%;
   background-color: rgba(255, 0, 0, 0.0); /* Semi-transparent black */
-  color: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
   padding: 20px;
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Google Sans', sans-serif;
 
 }
 .video-description1 {
   position: absolute;
   top: 0%;
-  left: 50%;
+  left: 62%;
   background-color: rgba(255, 0, 0, 0.0); /* Semi-transparent black */
-  color: rgb(255, 0, 0);
+  color: rgb(0, 0, 0);
   padding: 20px;
-  font-size: 15px;
+  font-size: 20px;
   font-family: 'Google Sans', sans-serif;
 
 }

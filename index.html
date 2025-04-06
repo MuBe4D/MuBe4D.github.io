@@ -87,6 +87,17 @@
     </div>
   </section>
 
+  <div class="container is-max-desktop">
+    <h2 style="text-align: center;" class="is-size-5">Zero-shot cross domain motion segmentation with 3D spatio-temporal information priori-guided, </h2>
+    <h2 style="text-align: center;" class="is-size-5">Enhanced 4D renconstruction pipeline</h2>
+    <img src="static/fig_contrib.png" alt="Image description" style="display: block; margin: auto;">
+    <br><br>
+    <h2 class="title is-3">Qulitative Results of Motion Segmentation</h2>
+    <img src="static/fig_seg_show.png" alt="Image description" style="display: block; margin: auto;">
+  </div>
+
+
+
 
   <!-- <section class="section">
     <div class="container is-max-desktop">
@@ -105,22 +116,23 @@
   <!-- resutl on DyNeRF dataset -->
   <section>
     <!-- </div> -->
-    <h2 style="text-align: center;" class="is-size-4">Zero-shot cross domain motion segmentation with 3D spatio-temporal information priori-guided, </h2>
-    <h2 style="text-align: center;" class="is-size-4">Enhanced 4D renconstruction pipeline</h2>
+
     <div class="container is-max-desktop">
       <!-- <h2 class="title is-4">Results on DyNeRF dataset</h2> -->
       <!-- <p>
           Here we display results of our MoDGS On DyNeRF dataset. <br><br>
           Change the scene by clicking the button below:
         </p> -->
-    </div>
-
+        <br><br>
+        <br><br>
+      
+ 
+    <h2 class="title is-3">Apply for 4D Renconstruction</h2>
+  </div>
     <!-- <section class="hero is-light is-small"> -->
     <div class="hero-body">
       <!-- <div class="column is-full-width has-text-centered"> -->
       <!-- <div class="container"> -->
-      <div id="results-carousel" class="carousel results-carousel">
-
         <div class="item item-steve video-grid">
           <div class="video-description0">Ours</div>
           <div class="video-description1">Align3R</div>
@@ -129,7 +141,7 @@
 
 
           <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
+          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline width="60%">
             <source src="static/bonn_crowd3.mp4" type="video/mp4">
           </video>
         </div>
@@ -143,538 +155,69 @@
   </section>
 
 
+  <!-- <br>
+  <br>
+  <br>
+  <br>
+  <br> -->
 
-  <!-- Abstract -->
+      <!-- Abstract -->
   <!-- Abstract -->
   <!-- Abstract -->
   <!-- <section class="section"> -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <!-- Abstract. -->
-      <h2 class="title is-3">Abstract</h2>
-      <div class="content has-text-justified">
-        <p>
-          In this paper, we propose MoDGS, a new pipeline to render novel-view images in dynamic scenes using only
-          casually captured monocular videos.
-          Previous monocular dynamic NeRF or Gaussian Splatting methods strongly rely on the rapid movement of input
-          cameras to construct multiview consistency but fail to reconstruct dynamic scenes on casually captured input
-          videos whose cameras are static or move slowly.
-        </p>
-        <p>
-          To address this challenging task, MoDGS adopts recent single-view depth estimation methods to guide the
-          learning of the dynamic scene.
-          Then, a novel 3D-aware initialization method is proposed to learn a reasonable deformation field and a new
-          robust depth loss is proposed to guide the learning of dynamic scene geometry.
-          Comprehensive experiments demonstrate that MoDGS is able to render high-quality novel view images of dynamic
-          scenes from just a casually captured monocular video,
-          which outperforms baseline methods by a significant margin.
-        </p>
-      </div>
-    </div>
-  </section>
-
-  <!-- <section class="section" id="abstract">
-    <div class="container is-max-desktop">
-      <div class="columns is-centered">
-        <div class="column">
-          <iframe width="960" height="540" src="https://www.youtube.com/embed/oBN3p716c_k?si=5r9EEMeMLzn6Is1l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <section class="section">
+      <div class="container is-max-desktop">
+        <!-- Abstract. -->
+        <h2 class="title is-3">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            Motion segmentation techniques, which underpin dynamic scene understanding and 4D reconstruction, rely on high-quality spatio-temporal feature modeling to delineate independent motion regions in 3D space. However, existing deep learning methods typically rely on long time-series 2D spatio-temporal information (e.g., appearance information and optical flow) are constrained by the lossy compression inherent in 2D projections and continue to encounter significant performance bottlenecks in complex dynamic scenes characterized by intricate backgrounds or articulated motions.
+          </p>
+          <p>
+            To address these issues, this work proposes a 3D spatio-temporal information priori guided motion segmentation framework aimed at enhancing zero-shot generalization in motion segmentation. The proposed Dual-Dimension Multi-path Information Fusion(D^2MIF) Module employs a recursive multi-path fusion mechanism to synergistically integrate complementary 3D and 2D spatio-temporal information, thereby further improving both the generalization of motion segmentation and fine-grained motion sensing in complex dynamic scenes. Additionally, the framework can be incorporated into the existing 4D reconstruction pipeline as a plug-and-play sub-module that enhances the global geometric consistency of dynamic scene reconstruction through refined motion segmentation masks. We further improve the hierarchical optimization strategy to enhance the usability of the 4D reconstruction pipeline in large-scale dynamic scenes, thereby forming a complete closed loop from the prediction of motion segmentation masks to the 4D reconstruction of dynamic scenes. We conduct extensive cross-domain zero-shot experiments to validate both the robust competitiveness and the generalization performance of the proposed motion segmentation model, and we further demonstrate the superiority of the enhanced 4D reconstruction pipeline on dynamic scene reconstruction datasets.
+          </p>
         </div>
       </div>
-    </div>
-  </section> -->
-
-
-  <!-- Comparison -->
-  <!-- Comparison -->
-  <!-- Comparison -->
-  <section class="section">
-    <div class="container is-max-desktop">
-      <h2 class="title is-4">Comparisons with SOTA</h2>
-      <p>
-        Here we display side-by-side videos comparing our method to the most recent Gaussian Methods. <br><br>
-        Select a scene and a baseline method below:
-      </p>
-      <br>
-      <div class="xxx" hight="100px">
-        <div class="tabs-widget">
-          <div class="tabs is-centered">
-            <ul class="is-marginless">
-              <li><a>Coffee-Martini</a></li>
-              <li><a>Sear-Steak</a></li>
-              <li><a>Dead Drift</a></li>
-            </ul>
-          </div>
-          <div class="content has-text-centered is-size-7-mobile">
-            Interactive visualization. Hover or tap to move the split.
-          </div>
-          <div class="tabs-content">
-            <!-- Begin coffee_martini. -->
-            <div>
-              <div class="tabs-widget">
-                <div class="tabs is-centered is-toggle is-toggle-rounded is-small">
-                  <ul class="is-marginless">
-                    <li><a>SC-GS vs. Ours</a></li>
-                    <li><a>D-GS vs. Ours</a></li>
-
-                  </ul>
-                </div>
-                <div class="tabs-content">
-                  Ours method accurately reconstruct the motion and geometry of the dynamic scene,
-                  while baseline methods show artifacts and blurriness.
-
-                  <div class="video-comparison" data-label="SC-GS" data-label2="Ours">
-                    <video class="video" width=400px loop playsinline muted
-                      src="./static\DemoVideos_comparison\CoffeeMartini_sc-gs-VS-ours.mp4"></video>
-                    <canvas></canvas>
-                  </div>
-                  <div class="video-comparison" data-label="D—GS" data-label2="Ours">
-                    <video class="video" width=400px loop playsinline muted
-                      src="./static\DemoVideos_comparison\CoffeeMartini_d-gs-VS-ours.mp4"></video>
-                    <canvas></canvas>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <!-- End coffee_martini. -->
-            <!-- Begin SearSteak. -->
-            <div>
-              <div class="tabs-widget">
-                <div class="tabs is-centered is-toggle is-toggle-rounded is-small">
-                  <ul class="is-marginless">
-                    <li><a>SC-GS vs. Ours</a></li>
-                    <li><a>D-GS vs. Ours</a></li>
-
-                  </ul>
-                </div>
-                <div class="tabs-content">
-                  Ours method accurately reconstruct the motion and geometry of the dynamic scene,
-                  while baseline methods show artifacts and blurriness.
-                  <div class="video-comparison" data-label="SC-GS" data-label2="Ours">
-                    <video class="video" width=400pxloop playsinline muted
-                      src="./static\DemoVideos_comparison\SearSteak_sc-gs-VS-ours.mp4"></video>
-                    <canvas></canvas>
-                  </div>
-                  <div class="video-comparison" data-label="D—GS" data-label2="Ours">
-                    <video class="video" width=400px loop playsinline muted
-                      src="./static\DemoVideos_comparison\SearSteak_d-gs-VS-ours.mp4"></video>
-                    <canvas></canvas>
-                  </div> 
-
-                </div>
-              </div>
-            </div>
-            <!-- End SearSteak. -->
-            <!-- Begin Dead drift. -->
-            <div>
-              <div class="tabs-widget">
-                <div class="tabs is-centered is-toggle is-toggle-rounded is-small">
-                  <ul class="is-marginless">
-                    <li><a>SC-GS vs. Ours</a></li>
-                    <li><a>D-GS vs. Ours</a></li>
-
-                  </ul>
-                </div>
-                <div class="tabs-content">
-                  Ours method accurately reconstruct the motion and geometry of the dynamic scene,
-                  while baseline methods show artifacts and blurriness.
-                  <div class="video-comparison" data-label="SC-GS" data-label2="Ours">
-                    <video class="video" width=400px loop playsinline muted
-                      src="./static\DemoVideos_comparison\DeadDrift_sc-gs-VS-ours.mp4"></video>
-                    <canvas></canvas>
-                  </div>
-                  <div class="video-comparison" data-label="D—GS" data-label2="Ours">
-                    <video class="video" width=400px loop playsinline muted
-                      src="./static\DemoVideos_comparison\DeadDrift_d-gs-VS-ours.mp4"></video>
-                    <canvas></canvas>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-            <!-- End Dead drift. -->
+    </section>
+  
+    <!-- <section class="section" id="abstract">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered">
+          <div class="column">
+            <iframe width="960" height="540" src="https://www.youtube.com/embed/oBN3p716c_k?si=5r9EEMeMLzn6Is1l" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
           </div>
         </div>
-
       </div>
-    </div>
-  </section>
-
-
-  <!-- resutl on Davis dataset -->
-  <!-- resutl on Davis dataset -->
-  <!-- resutl on Davis dataset -->
-
-  <section>
-    <div class="container is-max-desktop">
-      <h2 class="title is-4">Results on Davis dataset</h2>
-
-    </div>
-    <!-- <section class="hero is-light is-small"> -->
-    <div class="hero-body">
-      <!-- <div class="column is-full-width has-text-centered"> -->
-      <!-- <div class="container"> -->
-      <div id="results-carousel" class="carousel results-carousel">
-        <!-- balloon1-2-->
-
-
-        <!-- Balloon2-2 -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\davis\bear_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <!-- face  -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\davis\camel_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-
-
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\davis\cows_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-
-        <!--skatting  -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\davis\flamingo_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-        <!--Truck  -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\davis\lucia_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-        <!--Truck  -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\davis\rhino_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-
-
-
-      </div>
-      <!-- </div> -->
-    </div>
-    </div>
-  </section>
-
-  <!-- resutl on Nvidia dataset -->
-  <!-- resutl on Nvidia dataset -->
-  <!-- resutl on Nvidia dataset -->
-
-  <section>
-    <div class="container is-max-desktop">
-      <h2 class="title is-4">Results on Nvidia dataset</h2>
-
-    </div>
-    <!-- <section class="hero is-light is-small"> -->
-    <div class="hero-body">
-      <!-- <div class="column is-full-width has-text-centered"> -->
-      <!-- <div class="container"> -->
-      <div id="results-carousel" class="carousel results-carousel">
-        <!-- balloon1-2-->
-
-
-        <!-- Balloon2-2 -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\nv\balloon1-2_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <!-- face  -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\nv\face_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-
-
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\nv\ballon2-2_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-
-        <!--skatting  -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src=static\combined_Video_results\nv\skatting_4in1_output.mp4 type="video/mp4">
-          </video>
-        </div>
-        <!--Truck  -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src=static\combined_Video_results\nv\Truck_4in1_output.mp4 type="video/mp4">
-          </video>
-        </div>
-
-
-
-
-      </div>
-      <!-- </div> -->
-    </div>
-    </div>
-  </section>
-
-
-
-
-
-  <!-- resutl on self made dataset -->
-  <!-- resutl on self made dataset -->
-  <!-- resutl on self made dataset -->
-  <!-- resutl on self made dataset -->
-  <section>
-    <div class="container is-max-desktop">
-      <h2 class="title is-4">Results on in-the-wild video</h2>
-      <!-- <p>
-          Here we display results of our MoDGS On asDyNeRF datet. <br><br>
-          Change the scene by clicking the button below:
-        </p> -->
-    </div>
-
-    <!-- HORIZONTAL VIDEO -->
-    <!-- HORIZONTAL VIDEO -->
-    <!-- HORIZONTAL VIDEO -->
-    <div class="hero-body">
-      <!-- <div class="container"> -->
-      <div id="results-carousel" class="carousel results-carousel">
-
-
-        <!-- yoga17 -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\selfmade\exercise2_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-        <!-- exercise2  -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\selfmade\static_cellonado_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-        <!-- cellonado2  -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\selfmade\yoga17_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-
-
-
-
-
-      </div>
-      <!-- </div> -->
-    </div>
-
-    <!-- Vertical VIDEO -->
-    <!-- Vertical VIDEO -->
-    <div class="hero-body">
-      <!-- <div class="container"> -->
-      <div id="results-carousel" class="carousel results-carousel">
-        <!-- deaddrift -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\selfmade\deaddrift_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-        <!-- Dog eatting -->
-        <div class="item item-steve video-grid">
-          <div class="video-description0">input video</div>
-          <div class="video-description1">renderings</div>
-          <div class="video-description2">estimated monocular depth</div>
-          <div class="video-description3">rendered depth</div>
-
-
-          <!-- <div class="video-description0">input video</div> -->
-          <video poster="" id="steve gt_rgb" autoplay muted loop playsinline height="100%">
-            <source src="static\combined_Video_results\selfmade\doge_4in1_output.mp4" type="video/mp4">
-          </video>
-        </div>
-
-
-      </div>
-      <!-- </div> -->
-    </div>
-  </section>
-
-
-  <section>
-    <div class="container is-max-desktop">
-      <!-- <h2 class="title is-4">More Results will be uploaded later......</h2> -->
-      <!-- <p>
-          Here we display results of our MoDGS On asDyNeRF datet. <br><br>
-          Change the scene by clicking the button below:
-        </p> -->
-    </div>
-  </section>
-  <br>
-  <br>
-  <br>
-  <br>
-  <br>
+    </section> -->
 
   <section class="section">
     <div class="container is-max-desktop">
 
       <h2 class="title is-3">Method</h2>
       <div class="container is-max-desktop">
-        <img src="static\img\fig-overview_00.png" alt="Image description" style="display: block; margin: auto;">
+        <img src="static/fig_method.png" alt="Image description" style="display: block; margin: auto;">
         <p>
-          <strong>Fig 1.</strong><strong>Overview.</strong> Given a casually captured monocular video of a dynamic
-          scene, MoDGS represents the
-          dynamic scene with a set of Gaussians in a canonical
-          space and a deformation field represented by an MLP network T. To render an image at a specific timestep 𝑡,
-          we deform all the Gaussians by T𝑡 and then use
-          the splatting technique to render images and depth maps. While in training MoDGS, we use a single-view depth
-          estimator GeoWizard [Fu et al. 2024] to
-          estimate a depth map for every frame and compute the rendering loss and an ordinal depth loss to learn MoDGS.
+          <strong>Overview.</strong> Overview of the 3D spatio-temporal information priori-guided motion segmentation framework. 
+          We feed time-dependent image pairs into the 4D reconstruction model to extract 3D spatio-temporal priors. 
+          The D^2MIF (Dual-Dimension Multi-path Information Fusion) module then integrates 2D and 3D spatio-temporal information 
+          from multiple paths and recursively fuses spatio-temporal features to generate dynamic segmentation masks. 
+          Additionally, our motion segmentation model is incorporated as a plug-and-play sub-module within the existing 4D scene reconstruction 
+          pipeline, thereby enhancing reconstruction quality through the use of refined dynamic mask.
         </p>
       </div>
       <br><br>
       <div class="container is-max-desktop">
-        <img src="static\img\fig-deform_init1and2_00.png" alt="Image description" style="display: block; margin: auto;">
+        <img src="static/fig_recon_pipeline.png" alt="Image description" style="display: block; margin: auto;">
         <p>
-          <strong>Fig 2.</strong><strong>(a) Initialization of the deformation field.</strong> We first lift the depth
-          maps and a 2D flow to a
-          3D flow and train the deformation field for initialization.
-          <strong>(b) Initialization of Gaussians in the canonical space.</strong> We use the initialized deformation
-          field to deform all the depth points to the canonical space and
-          downsample these depth points to initialize Gaussians.
+          <strong>Schematic of enhanced 4D renconstruction pipeline.</strong>
+          	We construct video graphs from time-continuous video frames using 
+          a sliding window approach to form image pairs. For each pair, we predict motion segmentation masks and local pointmaps (top). 
+          During batch optimization, an initial globally aligned pointmaps is generated using a Minimum Spanning Tree and rigid registration, 
+          followed by iterative optimization via first-order gradient descent (left bottom). 
+          Additionally, we optimize the keyframe strategy to enhance global scale consistency in hierarchical optimization (right bottom).
         </p>
       </div>
       <br><br>
-      <div class="container is-max-desktop">
-        <img src="static\img\fig-depthoderloss_00.png" alt="Image description" width=50%
-          style="display: block; margin: auto;">
-        <p>
-          <strong>Fig 3.</strong> We show the estimated single-view depth maps at two different timesteps 𝐷𝑡𝑖
-          and 𝐷𝑡𝑗 after normalization to the same scale. Since the
-          single-view depth estimator is not accurate enough, the depth maps are
-          not linear related so the scale normalization does not perfectly align them.
-          However, the order of depth values on three corresponding pixels is stable
-          for these two depth maps, which motivates us to propose an ordinal depth loss for supervision.
-        </p>
-        <p class="title is-6"><span style="color:red;">Please See our video results above ,our rendered depth videos are
-            more consistent and stable than the inputs.</p>
-      </div>
     </div>
   </section>
 
@@ -688,7 +231,7 @@
         <div class="column is-8">
           <div class="content">
             <p>
-              This webpage is based on the project page for <a href="https://nerf-casting.github.io/">NeRF-Casting</a>,
+              This webpage is based on the project page for <a href="https://https://modgs.github.io/">MoDGS</a>, <a href="https://nerf-casting.github.io/">NeRF-Casting</a>,
               <a href="https://camp-nerf.github.io">CamP</a> and <a href="https://nerfies.github.io/">Nerfies</a>. The
               video
               comparison tool is from the <a href="https://dorverbin.github.io/refnerf/index.html">Ref-NeRF</a>
