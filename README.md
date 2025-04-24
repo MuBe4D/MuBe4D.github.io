@@ -1,6 +1,6 @@
-# MoDGS
-project page of Paper "MoDGS: Dynamic Gaussian Splatting from Causually-captured
-Monocular Videos":
-[MoDGS.github.io](https://MoDGS.github.io/)
+# MuBe4D
 
-offical codes repo:[https://github.com/MoDGS/MoDGS](https://github.com/MoDGS/MoDGS)
+project page of Paper "A Mutual Benefit framework for Generalizable Motion Segmentation 
+
+and Geometry-First 4D Reconstruction":
+[MuBe4D.github.io](https://MuBe4D.github.io/)
