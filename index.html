@@ -208,7 +208,7 @@
 
   <div class="container is-max-desktop">
     <h2 style="text-align: center;" class="is-size-5">A unified framework for mutual reinforcement of motion and geometry, </h2>
-    <h2 style="text-align: center;" class="is-size-5">Zero-shot motion segmentation with 3D spatio-temporal information priori-guided, </h2>
+    <h2 style="text-align: center;" class="is-size-5">Zero-shot motion segmentation with 3D spatio-temporal information prior-guided, </h2>
     <h2 style="text-align: center;" class="is-size-5">Enhanced 4D renconstruction pipeline</h2>
     <img src="static/img/fig_contrib.png" alt="Image description" style="display: block; margin: auto;">
     <br><br>
@@ -238,9 +238,11 @@
         <div class="content has-text-justified">
           <p>
             Estimating motion and geometry from dynamic scenes is an open and underconstrained problem in computer vision.  Constrained by the limited availability of co-labeled data, current end-to-end methods consider motion segmentation and geometry estimation as two independent tasks, with motion segmentation unilaterally facilitating geometric alignment in downstream applications. However, geometry estimation also offers valuable information for enhancing motion segmentation.
+            <!-- Estimating motion and geometry from dynamic scenes is an open and underconstrained problem in computer vision.  Constrained by the limited availability of co-labeled data, current end-to-end methods consider motion segmentation and geometry estimation as two independent tasks, with motion segmentation unilaterally facilitating geometric alignment in downstream applications. However, geometry estimation also offers valuable information for enhancing motion segmentation. -->
           </p>
           <p>
-            This paper proposes a framework mutually benefiting zero-shot motion segmentation and consistent geometric reconstruction. Specifically, 3D spatio-temporal priors are extracted from a geometry-first 4D reconstruction model to guide generalizable motion segmentation. A Dual-Dimension Multi-path Information Fusion (D$^2$MIF) module is designed to fuse complementary 3D and 2D information at multiple scales through a recursive refinement mechanism, thereby improving zero-shot segmentation in complex dynamic scenes with background distraction and object articulations. Subsequently, the refined motion segmentation mask is utilized to more accurately separate the dynamic foreground from the static background during alignment, thus improving the geometric consistency of the 4D reconstruction. The framework outcomes provide a complete description of the motion process while maintaining efficiency. Experimental results validate the proposed framework's mutual benefits and superiority in downstream 4D reconstruction tasks. The motion segmentation model exhibits competitiveness and generalizability.
+            This paper proposes a framework mutually benefiting zero-shot motion segmentation and consistent geometric reconstruction. Specifically, 3D spatio-temporal priors are extracted from a geometry-first 4D reconstruction model to guide generalizable motion segmentation. A Dual-Dimension Multi-path Information Fusion (D$^2$MIF) module is designed to fuse complementary 3D and 2D information at multiple scales through a recursive refinement mechanism, thereby improving zero-shot segmentation in complex dynamic scenes with background distraction and object articulations. Subsequently, the refined motion segmentation mask is utilized to more accurately separate the dynamic foreground from the static background during alignment, thus improving the geometric consistency of the 4D reconstruction. Experimental results validate the proposed framework's mutual benefits and efficiency in downstream 4D reconstruction tasks, the motion segmentation model exhibits competitiveness and generalizability.
+            <!-- This paper proposes a framework mutually benefiting zero-shot motion segmentation and consistent geometric reconstruction. Specifically, 3D spatio-temporal priors are extracted from a geometry-first 4D reconstruction model to guide generalizable motion segmentation. A Dual-Dimension Multi-path Information Fusion (D$^2$MIF) module is designed to fuse complementary 3D and 2D information at multiple scales through a recursive refinement mechanism, thereby improving zero-shot segmentation in complex dynamic scenes with background distraction and object articulations. Subsequently, the refined motion segmentation mask is utilized to more accurately separate the dynamic foreground from the static background during alignment, thus improving the geometric consistency of the 4D reconstruction. The framework outcomes provide a complete description of the motion process while maintaining efficiency. Experimental results validate the proposed framework's mutual benefits and superiority in downstream 4D reconstruction tasks. The motion segmentation model exhibits competitiveness and generalizability. -->
           </p>
         </div>
       </div>
@@ -267,7 +269,7 @@
           We feed time-dependent image pairs into the geometry-first 4D reconstruction model to extract 3D spatio-temporal prior. 
           The D^2MIF (Dual-Dimension Multi-path Information Fusion) module then integrates 2D and 3D spatio-temporal information from multiple paths and fuses spatio-temporal features recursively to generate dynamic segmentation masks. 
           Additionally, our motion segmentation model is incorporated as a plug-and-play sub-module to the 4D reconstruction pipeline, 
-          thereby enhancing geometric consistency through the refined dynamic mask.
+          enhancing geometric consistency through the refined dynamic mask.
           <!-- We feed time-dependent image pairs into the 4D reconstruction model to extract 3D spatio-temporal priors. 
           The D^2MIF (Dual-Dimension Multi-path Information Fusion) module then integrates 2D and 3D spatio-temporal information 
           from multiple paths and recursively fuses spatio-temporal features to generate dynamic segmentation masks. 
@@ -280,11 +282,14 @@
         <img src="static/img/fig_recon_pipeline.png" alt="Image description" style="display: block; margin: auto;">
         <p>
           <strong>Schematic of enhanced 4D renconstruction pipeline.</strong>
-          We construct a video graph from time-continuous video frames using a sliding window approach. For each image pair in the video graph, 
+          (top) We construct a video graph from time-continuous video frames using a sliding window approach. We predict motion segmentation masks and local pointmaps for each image pair in the video graph.
+          (left bottom) During batch optimization, an initial globally aligned pointmaps is generated using a Minimum Spanning Tree and rigid registration, followed by iterative optimization via first-order gradient descent.
+          (right bottom) Additionally, we optimize the keyframe strategy to enhance global scale consistency in hierarchical optimization.
+          <!-- We construct a video graph from time-continuous video frames using a sliding window approach. For each image pair in the video graph, 
           we predict motion segmentation masks and local pointmaps (top). 
           During batch optimization, an initial globally aligned pointmaps is generated using a Minimum Spanning Tree and rigid registration, 
           followed by iterative optimization via first-order gradient descent (left bottom). 
-          Additionally, we optimize the keyframe strategy to enhance global scale consistency in hierarchical optimization (right bottom).
+          Additionally, we optimize the keyframe strategy to enhance global scale consistency in hierarchical optimization (right bottom). -->
           	<!-- We construct video graphs from time-continuous video frames using 
           a sliding window approach to form image pairs. For each pair, we predict motion segmentation masks and local pointmaps (top). 
           During batch optimization, an initial globally aligned pointmaps is generated using a Minimum Spanning Tree and rigid registration, 
